@@ -6,35 +6,33 @@ import {RootStackParamList} from '../../navigation/NavigationType';
 type SplashScreenNavigationProp = NavigationProp<RootStackParamList, 'Splash'>;
 
 type Props = {
-  navigation: SplashScreenNavigationProp;
+    navigation: SplashScreenNavigationProp;
 };
 
 export const Splash = ({navigation}: Props) => {
-  useEffect(() => {
-    setTimeout(() => {
-      navigation.reset({
-        index: 0,
-        routes: [{name: 'Auth'}],
-      });
-    }, 1000);
-  }, [navigation]);
+    useEffect(() => {
+        navigation.reset({
+            index: 0,
+            routes: [{name: 'UserNavi'}],
+        });
+    }, [navigation]);
 
-  return (
-    <SafeAreaView>
-      <StatusBar />
-      <View style={styles.container}>
-        <Text>Splash</Text>
-      </View>
-    </SafeAreaView>
-  );
+    return (
+        <SafeAreaView>
+            <StatusBar />
+            <View style={styles.container}>
+                <Text>Splash</Text>
+            </View>
+        </SafeAreaView>
+    );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    width: '100%',
-    height: '100%',
-    justifyContent: 'center',
-    alignContent: 'center',
-    textAlign: 'center',
-  },
+    container: {
+        width: '100%',
+        height: '100%',
+        justifyContent: 'center',
+        alignContent: 'center',
+        textAlign: 'center',
+    },
 });

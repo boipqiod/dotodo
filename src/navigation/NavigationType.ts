@@ -1,12 +1,14 @@
 export type RootStackParamList = {
-  Splash: undefined;
-  Main: undefined;
-  Auth: {screen: keyof AuthStackParamList};
+    Splash: undefined;
+    Main: undefined;
+    UserNavi: {screen: keyof UserStackParamList};
+    Scan: undefined;
+    PassportScan: undefined;
 };
 
-export type AuthStackParamList = {
-  Login: undefined;
-  Register: undefined;
-  ForgotPassword: undefined;
-  ResetPassword: undefined;
+export type UserStackParamList = {
+    Login: undefined;
+    Register: undefined;
+    ForgotPassword: undefined;
+    ResetPassword: undefined;
 };
